@@ -3,7 +3,7 @@
 $host = 'localhost';
 $dbname = 'group7';
 $dbusername = 'root';
-$dbpassword = 'Clinton565';
+$dbpassword = '';
 
 try {
 
