@@ -1,6 +1,6 @@
 <?php
 
-include 'includes/config.inc.php';
+include 'config.inc.php';
 // $host = '';
 // $dbname = '';
 // $dbusername = '';
@@ -19,7 +19,6 @@ include 'includes/config.inc.php';
 try {
 
     $pdo = new PDO("mysql:host=" . DB_HOST . ";dbname=" . DB_NAME, DB_USER, DB_PASS);
-     echo "Successfully connected to the database";
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 } catch (PDOException $e) {
