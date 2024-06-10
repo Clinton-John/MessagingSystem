@@ -28,10 +28,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
          }
            
          require_once 'config_session.inc.php';
+
          if ($errors) { //if there exists an error then set a session error
           $_SESSION["errors_login"] = $errors;
    
-          header("location: ../signup.php");
+          header("location: ../login.php");
           die();// stops the other codes from running after the errors have been displayed
          }
          $newSessionId = session_create_id();
@@ -44,13 +45,13 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
          $_SESSION["last-regeneration"]= time();
 
-         header("location: ../signup.php?login=success");
+         header("location: ../index.php?login=success");
           $pdo = null;
          $stmt = null;
          die();
           
-         create_user($pdo, $username,  $pwd , $email);
-          header("location: ../signup.php");
+        //  create_user($pdo, $username,  $pwd , $email);
+          header("location: ../login.php");
           die();
            
           $pdo = null;

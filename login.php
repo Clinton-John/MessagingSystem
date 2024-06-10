@@ -1,3 +1,8 @@
+<?php
+include 'includes/config_session.inc.php';
+require_once "includes/login_view.inc.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,5 +24,9 @@
         </div>
         <button type="submit" class="form-button">Login</button>
     </form>
+
+    <?php
+      check_login_errors();
+    ?>
 </body>
 </html>

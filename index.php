@@ -1,3 +1,9 @@
+<?php
+  require_once 'includes/config_session.inc.php';
+require_once 'includes/login_view.inc.php';
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,6 +18,12 @@
 
         <h2><a href="signup.php">Signup</a></h2>
         <h2><a href="login.php">Login</a></h2>
+        <h2><a href="logout.php">Logout</a></h2>
+
+        <br>
+        <?php
+        output_username();
+        ?>
     </div>
 </body>
 </html>
