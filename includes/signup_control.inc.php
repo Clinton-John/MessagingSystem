@@ -38,7 +38,7 @@ function is_email_invalid(string $email){
  }
 
  //creatng a user function
- function create_user(object $pdo, string $username, string $pwd ,string $email){
+ function create_user(object $pdo, string $username, string $pwd , string $phone ,string $email){
 
-    set_user( $pdo,  $username,  $pwd , $email);
+    set_user( $pdo,  $username,  $pwd , $email, $phone);
  }

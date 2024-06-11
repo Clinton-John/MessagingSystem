@@ -18,15 +18,19 @@ include 'includes/signup_view.inc.php';
     <form action="includes/signup.inc.php" method="POST" id="signup-form">
         <div class="form-group">
             <label for="username">Username</label>
-            <input type="text" name="username" id="username" class="form-input">
+            <input required type="text" name="username" id="username" class="form-input">
         </div>
         <div class="form-group">
             <label for="email">Email</label>
-            <input type="email" name="email" id="email" class="form-input">
+            <input type="email" name="email" placeholder="eg.. johndoe@gmail.com" id="email" class="form-input">
         </div>
+        <label for="phone">Phone Number</label>
+            <div class="phone-input">
+                <input required type="text" name="phone" id="phone" class="form-input" placeholder="eg..+254712345678" required>
+            </div>
         <div class="form-group">
             <label for="password">Password</label>
-            <input type="password" name="password" id="password" class="form-input">
+            <input required type="password" name="password" id="password" class="form-input">
         </div>
         <button type="submit" class="form-button">Signup</button>
 

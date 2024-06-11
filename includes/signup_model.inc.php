@@ -30,19 +30,20 @@ function get_email(object $pdo, string $email){
  }
 
  // the below function is incharge of entering the functions inside the database
- function set_user(object $pdo, string $username, string $pwd ,string $email){
-   $query = "INSERT INTO users (username, email, pwd) VALUES (:username, :email, :pwd );";
+ function set_user(object $pdo, string $username, string $pwd ,string $email , string $phone){
+   $query = "INSERT INTO users (username, email, phone, pwd) VALUES (:username, :email, :phone, :pwd );";
    $stmt = $pdo->prepare($query);
 
      // the below section hashes the user password 
 
  $options = [
-   'cost' => 12
+   'cost' => 12 
    ];
   
    $hashedpwd = password_hash($pwd , PASSWORD_BCRYPT, $options);
    $stmt->bindParam(":username", $username);
    $stmt->bindParam(":email", $email);
+   $stmt->bindParam(":phone", $phone);
    $stmt->bindParam(":pwd", $hashedpwd);
    $stmt->execute();
    
