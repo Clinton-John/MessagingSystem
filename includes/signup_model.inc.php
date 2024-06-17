@@ -30,7 +30,7 @@ function get_email(object $pdo, string $email){
  }
 
  // the below function is incharge of entering the functions inside the database
- function set_user(object $pdo, string $username, string $pwd ,string $email , string $phone){
+function set_user(object $pdo, string $username, string $pwd ,string $email , string $phone){
    $query = "INSERT INTO users (username, email, phone, pwd) VALUES (:username, :email, :phone, :pwd );";
    $stmt = $pdo->prepare($query);
 
